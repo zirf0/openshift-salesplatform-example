@@ -5,6 +5,8 @@
  
 # SETUP #
 
-*rhc  app create php-5.3 mysql-5.5 --from-code=https://github.com/zirf0/openshift-salesplatform-example*
+*rhc  app create SpExample php-5.3 mysql-5.5 --from-code=https://github.com/zirf0/openshift-salesplatform-example*
 
-Open site and follow installation instruction, on Step 4 data for database will be autofilled.
+Instead SpExample you can use your own name.
+
+Open site **youname-yordomain.rhcloud.com** and follow installation instruction, on Step 4 data for database will be autofilled.
