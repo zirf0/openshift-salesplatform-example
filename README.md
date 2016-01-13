@@ -1,0 +1,2 @@
+# Sales Platform on OpenShift #
+
