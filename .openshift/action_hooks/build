@@ -25,12 +25,15 @@ pushd ${install_dir} >/dev/null
 
 curl -Ls http://downloads.sourceforge.net/project/salesplatform/salesplatform-vtigercrm-${install_version}.tar.gz > salesplatform-vtigercrm-${install_version}.tar.gz
 wget http://downloads.sourceforge.net/project/salesplatform/addons/salesplatform-customerportal-${install_version}.tar.gz 
+
 rm htaccess.txt
-mkdir cp # for customer portal
+
+mkdir sd # for customer portal
+
 # Install SalesPlatform
 # and customer portal
 tar --strip-components=1 -xzf salesplatform-vtigercrm-${install_version}.tar.gz
-tar --strip-components=1 -xf salesplatform-customerportal-${install_version}.tar.gz -C cp
+tar --strip-components=1 -xf salesplatform-customerportal-${install_version}.tar.gz -C sd
 rm -rf salesplatform-vtigercrm-${install_version}.tar.gz
 rm -rf salesplatform-customerportal-${install_version}.tar.gz
 echo $install_version > ${OPENSHIFT_BUILD_DEPENDENCIES_DIR}.current_version

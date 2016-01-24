@@ -23,16 +23,20 @@ fi
 ln -sf ${dest_dir} ${OPENSHIFT_REPO_DIR}php
 
 # Use repository htaccess if exists 
+
 if [  -f ${OPENSHIFT_REPO_DIR}.openshift/config/.htaccess ]; then
   cp -f ${OPENSHIFT_REPO_DIR}.openshift/config/.htaccess ${dest_dir}/.htaccess
 fi
 
 set -e
 
-# apply patch
+# apply patches
 
-if [  -f ${OPENSHIFT_REPO_DIR}.openshift/config/db_conf.patch ]; then
-  patch ${dest_dir}/modules/Install/views/Index.php    ${OPENSHIFT_REPO_DIR}.openshift/config/db_conf.patch 
+if [  -f ${OPENSHIFT_REPO_DIR}.openshift/config/patches]; then
+  patch ${dest_dir}/modules/Install/views/Index.php    ${OPENSHIFT_REPO_DIR}.openshift/config/patches/db_conf.patch 
+  patch ${dest_dir}/layouts/vlayout/modules/Install/Step4.tpl   ${OPENSHIFT_REPO_DIR}.openshift/config/patches/install_step4_tpl.patch
+  patch ${dest_dir}/languages/ru_ru/Install.php   ${OPENSHIFT_REPO_DIR}.openshift/config/patches/lang_ru_installation_php.patch 
+  patch ${dest_dir}/sd   ${OPENSHIFT_REPO_DIR}.openshift/config/patches/customer_portal.patch
 fi
 
 
