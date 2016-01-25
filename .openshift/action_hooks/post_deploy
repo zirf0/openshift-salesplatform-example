@@ -3,4 +3,3 @@
 # is deployed and started.  This script gets executed directly, so 
 # it could be python, php, ruby, etc.
 
-cp ${OPENSHIFT_DATA_DIR}current/config.inc.php ${OPENSHIFT_REPO_DIR}.openshift/config 
