@@ -1,18 +1,18 @@
---- /home/andrey/src/customerportal/CustomerAuthenticate.php    2015-12-18 15:08:39.000000000 +0300
-+++ sd/CustomerAuthenticate.php 2016-01-25 01:29:56.973780874 +0300
+--- CustomerAuthenticate.php	2016-01-25 05:03:36.596579591 +0300
++++ /home/andrey/spdev/sd/CustomerAuthenticate.php	2016-01-25 01:29:56.973780874 +0300
 @@ -34,13 +34,13 @@
  if ($err)
  {
-        //Uncomment the following lines to get the error message in login screen itself.
--       /*
+ 	//Uncomment the following lines to get the error message in login screen itself.
+-	/*
 +
-        echo '<h2>Error Message</h2><pre>' . $err . '</pre>';
-        echo '<h2>request</h2><pre>' . htmlspecialchars($client->request, ENT_QUOTES) . '</pre>';
-        echo '<h2>response</h2><pre>' . htmlspecialchars($client->response, ENT_QUOTES) . '</pre>';
-        echo '<h2>debug</h2><pre>' . htmlspecialchars($client->debug_str, ENT_QUOTES) . '</pre>';
-        exit;
--       */
+ 	echo '<h2>Error Message</h2><pre>' . $err . '</pre>';
+ 	echo '<h2>request</h2><pre>' . htmlspecialchars($client->request, ENT_QUOTES) . '</pre>';
+ 	echo '<h2>response</h2><pre>' . htmlspecialchars($client->response, ENT_QUOTES) . '</pre>';
+ 	echo '<h2>debug</h2><pre>' . htmlspecialchars($client->debug_str, ENT_QUOTES) . '</pre>';
+ 	exit;
+-	*/
 +
-        $login_error_msg = getTranslatedString("LBL_CANNOT_CONNECT_SERVER");
-        $login_error_msg = base64_encode('<font color=red size=1px;> '.$login_error_msg.' </font>');
-        header("Location: login.php?login_error=$login_error_msg");
+ 	$login_error_msg = getTranslatedString("LBL_CANNOT_CONNECT_SERVER");
+ 	$login_error_msg = base64_encode('<font color=red size=1px;> '.$login_error_msg.' </font>');
+ 	header("Location: login.php?login_error=$login_error_msg");
