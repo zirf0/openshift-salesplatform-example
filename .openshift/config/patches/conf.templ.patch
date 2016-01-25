@@ -1,0 +1,18 @@
+--- /home/andrey/src/vtigercrm/config.template.php	2015-12-23 16:19:59.000000000 +0300
++++ /home/andrey/spdev/config.template.php	2016-01-25 03:06:49.285525997 +0300
+@@ -33,7 +33,7 @@
+ $USE_RTE = 'true';
+ 
+ // url for customer portal (Example: http://vtiger.com/portal)
+-$PORTAL_URL = 'http://vtiger.com/customerportal';
++$PORTAL_URL = 'http://'.getenv('OPENSHIFT_GEAR_DNS').'/sd'
+ 
+ // helpdesk support email id and support name (Example: 'support@vtiger.com' and 'vtiger support')
+ $HELPDESK_SUPPORT_EMAIL_ID = '_USER_SUPPORT_EMAIL_';
+@@ -213,4 +213,4 @@
+ // SalesPlatform.ru end
+ 
+ include_once 'config.security.php';
+-?>
+\ В конце файла нет новой строки
++?>

@@ -38,6 +38,7 @@ set -e
   patch ${dest_dir}/languages/ru_ru/Install.php   ${OPENSHIFT_REPO_DIR}.openshift/config/patches/lang_ru_installation_php.patch 
   patch ${dest_dir}/sd/CustomerAuthenticate.php   ${OPENSHIFT_REPO_DIR}.openshift/config/patches/cp-1.patch
   patch ${dest_dir}/sd/PortalConfig.php   ${OPENSHIFT_REPO_DIR}.openshift/config/patches/cp-2.patch
+  patch ${dest_dir}/config.template.php   ${OPENSHIFT_REPO_DIR}.openshift/config/patches/conf.templ.patch
 #fi
 
 
