@@ -28,7 +28,7 @@ if [  -f ${OPENSHIFT_REPO_DIR}.openshift/config/.htaccess ]; then
   cp -f ${OPENSHIFT_REPO_DIR}.openshift/config/.htaccess ${dest_dir}/.htaccess
 fi
 
-set -e
+#set -e
 
 # apply patches
 
