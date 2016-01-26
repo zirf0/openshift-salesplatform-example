@@ -26,7 +26,6 @@ pushd ${install_dir} >/dev/null
 curl -Ls http://downloads.sourceforge.net/project/salesplatform/salesplatform-vtigercrm-${install_version}.tar.gz > salesplatform-vtigercrm-${install_version}.tar.gz
 wget http://downloads.sourceforge.net/project/salesplatform/addons/salesplatform-customerportal-${install_version}.tar.gz 
 
-rm htaccess.txt
 
 mkdir sd # for customer portal
 
@@ -37,5 +36,5 @@ tar --strip-components=1 -xf salesplatform-customerportal-${install_version}.tar
 rm -rf salesplatform-vtigercrm-${install_version}.tar.gz
 rm -rf salesplatform-customerportal-${install_version}.tar.gz
 echo $install_version > ${OPENSHIFT_BUILD_DEPENDENCIES_DIR}.current_version
-
+rm htaccess.txt # as garbage
 popd >/dev/null
