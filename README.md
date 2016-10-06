@@ -3,7 +3,7 @@
 [![Join the chat at https://gitter.im/zirf0/openshift-salesplatform-example](https://badges.gitter.im/zirf0/openshift-salesplatform.svg)](https://gitter.im/zirf0/openshift-salesplatform-example?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
 SalesPlatform is a fork of VtigerCRM adapted for Russian Federation. Version 6.4.0
-<p aling="justify"> <fonr color="red"
+<p aling="justify"> <fonr color="red">
 Unfortunately, all information mostly for OpenShift v2, therefore for v3 it should be redisigned (REDME.md only). 
 Since Aug 1 2016 creating of new accont for v2 was stopped. For now system has new features, terminology etc. Please applicate for v3 (it's will not be immedeately). And any case you need accont for GitHub. Good Luck.
 
